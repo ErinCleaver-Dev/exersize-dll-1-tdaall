@@ -29,6 +29,7 @@ class DoubleLinkedList {
     this.length ++;
   }
   pop() {
+
     let removeNode = this.tail;
 
     if(!this.length) { 
@@ -42,7 +43,6 @@ class DoubleLinkedList {
         this.tail = this.tail.prev;
         // removes the old connections
         this.tail.next = null
-        removeNode.prev = null;
       }
     }
 
@@ -58,7 +58,6 @@ class DoubleLinkedList {
 
       // removes the old connections
       this.head.prev = null
-      removeNode.next = null;
     }
     this.length --;
   }
