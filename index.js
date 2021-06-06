@@ -64,11 +64,16 @@ class DoubleLinkedList {
   }
   print() {
     let currentNode = this.head;
+    let values = "[ "
     while(currentNode) {
-      console.log(`%c ${currentNode.value}`, 'color: white')
+      values += `${currentNode.value} `, 
       currentNode = currentNode.next;
     }
+    values+= " ]"
+    console.log(`%c ${values}`, 'color: white')
   }
+
+
 }
 
 // Tests
