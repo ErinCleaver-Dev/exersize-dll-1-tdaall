@@ -55,10 +55,8 @@ class DoubleLinkedList {
     if(!this.length) { 
       return null;
     } else {
-      let removeNode = this.head;
-
       // to hold the item to be removed 
-      this.head = removeNode.next;
+      this.head = this.head.next;
       // removes the old connections
       this.head.prev = null
     }
