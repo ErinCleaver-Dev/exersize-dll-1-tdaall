@@ -70,6 +70,7 @@ list.push("Huskies");
 list.push("are");
 list.push("the");
 list.push("best!");
+console.log(list);
 list.shift();
 list.pop();
 console.log(list);
