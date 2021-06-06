@@ -1,4 +1,8 @@
 // Node Class
+const end = () => {
+  console.log("%c -----------end---------", "color: white");
+}
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -30,7 +34,6 @@ class DoubleLinkedList {
   }
   pop() {
 
-    let removeNode = this.tail;
 
     if(!this.length) { 
       return null;
@@ -40,6 +43,8 @@ class DoubleLinkedList {
         this.head = null;
         this.tail = null;
       } else {
+        let removeNode = this.tail;
+
         this.tail = this.tail.prev;
         // removes the old connections
         this.tail.next = null
@@ -48,18 +53,25 @@ class DoubleLinkedList {
     this.length --;
   }
   shift() {
-    let removeNode = this.head;
 
     if(!this.length) { 
       return null;
     } else {
+      let removeNode = this.head;
+
       // to hold the item to be removed 
       this.head = removeNode.next;
-
       // removes the old connections
       this.head.prev = null
     }
     this.length --;
+  }
+  print() {
+    let currentNode = this.head;
+    while(currentNode) {
+      console.log(currentNode.value)
+      currentNode = currentNode.next;
+    }
   }
 }
 
@@ -69,7 +81,10 @@ list.push("Huskies");
 list.push("are");
 list.push("the");
 list.push("best!");
-console.log(list);
+list.print()
+end();
 list.shift();
 list.pop();
-console.log(list);
+list.print()
+end();
+
