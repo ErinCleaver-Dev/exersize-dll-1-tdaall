@@ -43,8 +43,6 @@ class DoubleLinkedList {
         this.head = null;
         this.tail = null;
       } else {
-        let removeNode = this.tail;
-
         this.tail = this.tail.prev;
         // removes the old connections
         this.tail.next = null
@@ -69,7 +67,7 @@ class DoubleLinkedList {
   print() {
     let currentNode = this.head;
     while(currentNode) {
-      console.log(currentNode.value)
+      console.log(`%c ${currentNode.value}`, 'color: white')
       currentNode = currentNode.next;
     }
   }
