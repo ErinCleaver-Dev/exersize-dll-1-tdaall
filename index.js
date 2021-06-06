@@ -45,7 +45,7 @@ class DoubleLinkedList {
         this.tail.next = null
       }
     }
-
+    this.length --;
   }
   shift() {
     let removeNode = this.head;
